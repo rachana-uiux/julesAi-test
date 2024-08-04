@@ -9,8 +9,8 @@ import assert from 'assert';
          // Test 1: Successful Login
         let url = await driver.get('https://demo.haroldwaste.com/'); 
         await driver.wait(until.elementLocated(By.name('email')), 50000);
-        await driver.findElement(By.name('email')).sendKeys('qa@julesai.com'); 
-        await driver.findElement(By.name('password')).sendKeys('QaJULES2023!'); 
+        await driver.findElement(By.name('email')).sendKeys('mail id'); 
+        await driver.findElement(By.name('password')).sendKeys('password'); 
         await driver.findElement(By.className('MuiButtonBase-root MuiButton-root MuiButton-contained jss10 jss11 MuiButton-containedPrimary')).click(); 
         // Wait for login to complete and validate successful login
         await driver.wait(until.elementLocated(By.className('UserAvatar--inner')),50000);
@@ -26,8 +26,8 @@ import assert from 'assert';
         //Test 2: Invalid Credentials
         await driver.get('https://demo.haroldwaste.com/'); 
         await driver.wait(until.elementLocated(By.name('email')), 50000);
-        await driver.findElement(By.name('email')).sendKeys('qa@julesai.com'); 
-        await driver.findElement(By.name('password')).sendKeys('QaJLES2023!'); 
+        await driver.findElement(By.name('email')).sendKeys('wrong maild id'); 
+        await driver.findElement(By.name('password')).sendKeys('wrong password'); 
         await driver.findElement(By.className('MuiButtonBase-root MuiButton-root MuiButton-contained jss10 jss11 MuiButton-containedPrimary')).click(); 
         // Wait for error message to pop up
         await driver.wait(until.elementLocated(By.xpath('//*[@id="notistack-snackbar"]/div')), 5000);
