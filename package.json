@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "@playwright/test": "^1.45.3",
+    "chai": "^5.1.1",
+    "chromedriver": "^126.0.5",
+    "mocha": "^10.7.0",
+    "playwright": "^1.45.3",
+    "selenium-webdriver": "^4.23.0"
+  },
+  "name": "selenium",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node scripts/loginTestPly.spec.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module"
+}
